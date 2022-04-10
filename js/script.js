@@ -1,26 +1,26 @@
 {
-  function playGame(playerInput){
-    clearMessages()
+  const playGame = function(playerInput){
+    clearMessages();
 
-    function getMoveName(argMoveId){
+    const getMoveName = function(argMoveId){
         if(argMoveId == 1){
           return 'kamień';
         }
       
-        else if (argMoveId == 2){
-            return 'papier';
-        }
+          else if (argMoveId == 2){
+              return 'papier';
+          }
 
-        else if (argMoveId == 3){
-            return 'nożyce';
-        }
+          else if (argMoveId == 3){
+              return 'nożyce';
+          }
         
         
         printMessage('Nie znam ruchu o id ' + argMoveId + '.');
         return 'nieznany ruch';
       }
 
-    function displayResult(argComputerMove, argPlayerMove){
+    const displayResult = function(argComputerMove, argPlayerMove){
         console.log('moves:', argComputerMove, argPlayerMove);
 
         if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
@@ -46,7 +46,7 @@
           else {
               printMessage('Tym razem przegrywasz:(')
           }
-    }
+      }
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
 
